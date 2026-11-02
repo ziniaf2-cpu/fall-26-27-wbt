@@ -1,0 +1,222 @@
+seller.html
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Seller Dashboard - EcoRide</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>EcoRide Seller Dashboard</h1>
+        <p>Welcome, Seller</p>
+        <a href="index.html">Home</a> |
+        <a href="login.html">Logout</a>
+    </header>
+
+    <hr>
+
+    <nav>
+        <a href="#overview">Dashboard Overview</a> |
+        <a href="#products">Product Listing</a> |
+        <a href="#stock">Stock Management</a> |
+        <a href="#orders">Customer Orders</a>
+    </nav>
+
+    <hr>
+
+    <section id="overview">
+        <h2>Dashboard Overview</h2>
+
+        <table border="1" cellpadding="10">
+            <tr>
+                <th>Total Products</th>
+                <th>Total Stock</th>
+                <th>Total Orders</th>
+                <th>Total Sales</th>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>150</td>
+                <td>35</td>
+                <td>৳45,000</td>
+            </tr>
+        </table>
+    </section>
+
+    <hr>
+
+    <section id="products">
+        <h2>Product Listing Management</h2>
+        <p>Seller can add, view, update and delete accessory products.</p>
+
+        <h3>Add New Product</h3>
+
+        <form action="#" method="post">
+
+            <label>Product Name:</label><br>
+            <input type="text" name="product\_name">
+            <br><br>
+
+            <label>Category:</label><br>
+            <select name="category">
+                <option>Safety Equipment</option>
+                <option>Bike Accessories</option>
+                <option>Bike Parts</option>
+            </select>
+            <br><br>
+
+            <label>Price:</label><br>
+            <input type="number" name="price">
+            <br><br>
+
+            <label>Product Description:</label><br>
+            <textarea name="description" rows="4" cols="40"></textarea>
+            <br><br>
+
+            <input type="submit" value="Add Product">
+
+        </form>
+
+        <h3>Search Product</h3>
+        <input type="text" name="search\_product" placeholder="Search product">
+        <input type="submit" value="Search">
+
+        <h3>Product List</h3>
+
+        <table border="1" cellpadding="8">
+            <tr>
+                <th>Product ID</th>
+                <th>Product Name</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td>P101</td>
+                <td>Safety Helmet</td>
+                <td>Safety Equipment</td>
+                <td>৳1500</td>
+                <td><a href="#">Edit</a> | <a href="#">Delete</a></td>
+            </tr>
+            <tr>
+                <td>P102</td>
+                <td>Bike Lock</td>
+                <td>Bike Accessories</td>
+                <td>৳500</td>
+                <td><a href="#">Edit</a> | <a href="#">Delete</a></td>
+            </tr>
+        </table>
+    </section>
+
+    <hr>
+
+    <section id="stock">
+        <h2>Stock Management</h2>
+        <p>Seller can update product quantities and check low stock products.</p>
+
+        <h3>Update Stock</h3>
+
+        <form action="#" method="post">
+
+            <label>Product ID:</label><br>
+            <input type="text" name="product\_id">
+            <br><br>
+
+            <label>Product Name:</label><br>
+            <input type="text" name="product\_name">
+            <br><br>
+
+            <label>Available Quantity:</label><br>
+            <input type="number" name="quantity">
+            <br><br>
+
+            <input type="submit" value="Update Stock">
+
+        </form>
+
+        <h3>Search Stock</h3>
+        <input type="text" name="search\_stock" placeholder="Search product stock">
+        <input type="submit" value="Search">
+
+        <h3>Stock Information</h3>
+
+        <table border="1" cellpadding="8">
+            <tr>
+                <th>Product ID</th>
+                <th>Product Name</th>
+                <th>Available Quantity</th>
+                <th>Stock Status</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td>P101</td>
+                <td>Safety Helmet</td>
+                <td>20</td>
+                <td>Available</td>
+                <td><a href="#">Edit</a> | <a href="#">Delete</a></td>
+            </tr>
+            <tr>
+                <td>P102</td>
+                <td>Bike Lock</td>
+                <td>3</td>
+                <td>Low Stock</td>
+                <td><a href="#">Edit</a> | <a href="#">Delete</a></td>
+            </tr>
+        </table>
+    </section>
+
+    <hr>
+
+    <section id="orders">
+        <h2>Customer Order Management</h2>
+        <p>Seller can view customer orders and update their order status.</p>
+
+        <h3>Search Customer Order</h3>
+        <input type="text" name="search\_order" placeholder="Search by order ID or customer name">
+        <input type="submit" value="Search">
+
+        <h3>Customer Orders</h3>
+
+        <table border="1" cellpadding="8">
+            <tr>
+                <th>Order ID</th>
+                <th>Customer Name</th>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Total Amount</th>
+                <th>Order Status</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td>OR101</td>
+                <td>Rahim Ahmed</td>
+                <td>Safety Helmet</td>
+                <td>1</td>
+                <td>৳1500</td>
+                <td>Pending</td>
+                <td><a href="#">Edit</a> | <a href="#">Delete</a></td>
+            </tr>
+            <tr>
+                <td>OR102</td>
+                <td>Karim Hasan</td>
+                <td>Bike Lock</td>
+                <td>2</td>
+                <td>৳1000</td>
+                <td>Completed</td>
+                <td><a href="#">Edit</a> | <a href="#">Delete</a></td>
+            </tr>
+        </table>
+    </section>
+
+    <hr>
+
+    <footer>
+        <p>EcoRide Seller Dashboard</p>
+    </footer>
+
+</body>
+
+</html>
